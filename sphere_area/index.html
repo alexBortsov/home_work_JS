@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<style>
+   .container {
+      width: 400px;
+      margin: 50px auto;
+      text-align: center;
+   }
+
+   .container p {
+      color: red;
+   }
+</style>
+</head>
+
+<body>
+   <div class="container">
+      <p>В всплывающем окне введите радиус сферы.</p>
+      <img src="sphere_valume.png" alt="sphere_valume">
+   </div>
+   <script>
+      //объём сферы
+      function sphereValume() {
+         let r = +prompt('Введите радиус сферы', '5');
+         let π = Math.PI;
+         let v = 4 / 3 * π * r ** 3;
+         console.log(v);
+         //проверка
+         console.log(`Проверка формулы: ${4 / 3 * 3.141592653589793 * 5 ** 3}`);
+         document.write(`<h1>Объём сферы: ${v};</h1>`)
+      }
+      setTimeout(sphereValume, 5000);
+   </script>
+</body>
+
+</html>
