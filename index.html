@@ -41,7 +41,55 @@
       //}  
       //alert(`Modified text: ${emptyStr}`);
       /*task 3*/
-      
+      /*method 1*/
+      //let name = prompt('Please enter your name', 'Alexander');
+      //let lastName = prompt('Please enter your last name', 'Bortsov');
+      //let middleName = prompt('Please enter your middle name', 'Mekhailovish');
+      //let str = lastName + ' ' + name[0] + '.' + middleName[0] + '.';
+      //console.log(str);
+      //alert(str);
+      /*method 2*/
+      //let person = prompt('Please enter your last name, name and middle name. Example: Pupkin Vacya Vasilevich.  ', 'Bortsov Alexander Mekhailovish');
+      //let personMiddle = person.split(' ').slice(1, 2).shift();
+      //let personFirst = person.split(' ').shift();
+      //let personLast = person.split(' ').pop();
+      //console.log(`${personFirst} ${personMiddle[0]}.${personLast[0]}.`)  
+      //console.log(personMiddle);
+      //console.log(personFirst);
+      //console.log(personLast);
+      //alert(`${personFirst} ${personMiddle[0]}.${personLast[0]}.`);
+      /*method 3*/
+      //let person = prompt('Please enter your last name, name and middle name. Example: Pupkin Vacya Vasilevich.  ', 'Bortsov Alexander Mekhailovish');
+      //let newPerson = '';
+      //for (let k = 0; k < person.length; k++) {
+      //   if (person[k] == person[k].toUpperCase()) {
+      //      newPerson += person[k];
+      //   }
+      //}
+      //let initials = newPerson.split(' ').join('.') + '.';
+      //newPerson = newPerson.split(' ').splice(1, 2).join('.') + '.';
+      //person = person.split(' ').splice(0, 1).join(' ') + ' ' + newPerson;
+      //console.log(person);
+      //alert(person);
+      //alert(initials);
+      /*task 4*/
+      let number;
+      let str = '';
+      while (true) {
+         number = prompt('Please enter the number');
+         if (!number) {
+            break;
+         }
+         if (!isNaN(number) && number !== '') {
+            for (let i = 0; i < number; i++) {
+               let sandomString = Math.round((10 + Math.random() * i));
+               str += sandomString.toString(36);
+            }
+            break;
+         }
+      }
+      console.log(str);
+      alert(str);
    </script>
 </body>
 
