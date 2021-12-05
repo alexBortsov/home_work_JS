@@ -10,68 +10,77 @@
 
 <body>
    <script>
-      ///*task 1*/
-      //let userString = prompt('Please enter any text with spaces', 'Please enter any text with spaces');
-      //let spaces = 0;
-      //for (let i = 0; i < userString.length; i++) {
-      //   const element = userString[i];
-      //   console.log(element);
-      //   if (element.includes(' ')) {
-      //      spaces++;
-      //   }
-      //}
-      //alert(`Your text has ${spaces} spaces.`);
-      ///*task 2*/
-      //let userOther = prompt('Please enter any text with spaces', 'Please enter any text with spaces');
-      //let min = 0, max;
-      //let emptyStr ='';
-      //for (let j = 0; j < userOther.length; j++) {
-      ///* method 1
-      //     if (userOther[j] === ' ') {
-      //   emptyStr += '5';
-      //  }else{ emptyStr += userOther[j]}*/
-      //      max = userOther.length;
-      // let randNumber = Math.round(Math.random() * (max - min) + min);
-      // //console.log(max);  
-      //// console.log(randNumber);
-      ///*method 2*/
-      //if (userOther[j].includes(' ')) {
-      //      emptyStr += userOther[j].replace(' ', randNumber);
-      //   }else{ emptyStr += userOther[j]}
-      //}  
-      //alert(`Modified text: ${emptyStr}`);
+      /*task 1*/
+      let userString = prompt('Please enter any text with spaces', 'Please enter any text with spaces');
+      let spaces = 0;
+      for (let i = 0; i < userString.length; i++) {
+         const element = userString[i];
+         console.log(element);
+         if (element.includes(' ')) {
+            spaces++;
+         }
+      }
+      alert(`Your text has ${spaces} spaces.`);
+      /*task 2*/
+      /* method 1*/
+      let userFirst = prompt('Please enter any text with spaces', 'Please enter any text with spaces');
+      let min = 0, max;
+      let strModif ='';
+      for (let j = 0; j < userFirst.length; j++) {
+      let randNumber = Math.round(Math.random() * (max - min) + min);     
+      max = userFirst.length;
+      if (userFirst[j] === ' ') {
+         strModif += randNumber;
+        }else{ strModif += userFirst[j]} 
+      }
+       console.log(max);   
+       alert(`Modified text: ${strModif}`);
+      /*method 2*/
+      let userSecond = prompt('Please enter any text with spaces', 'Please enter any text with spaces');
+      let minValue = 0, maxValue = userSecond.length;
+      let modifStr = '';
+      let randNumber = Math.round(Math.random() * (maxValue - minValue) + minValue);
+      for (let j = 0; j < userSecond.length; j++) {
+         if (userSecond[j].includes(' ')) {
+            modifStr += userSecond[j].replace(' ', randNumber);
+         } else { modifStr += userSecond[j] }
+      }
+      
+      console.log(maxValue);  
+      console.log(randNumber);
+      alert(`Modified text: ${modifStr}`);
       /*task 3*/
       /*method 1*/
-      //let name = prompt('Please enter your name', 'Alexander');
-      //let lastName = prompt('Please enter your last name', 'Bortsov');
-      //let middleName = prompt('Please enter your middle name', 'Mekhailovish');
-      //let str = lastName + ' ' + name[0] + '.' + middleName[0] + '.';
-      //console.log(str);
-      //alert(str);
+      let name = prompt('Please enter your name', 'Alexander');
+      let lastName = prompt('Please enter your last name', 'Bortsov');
+      let middleName = prompt('Please enter your middle name', 'Mekhailovish');
+      let strName = lastName + ' ' + name[0] + '.' + middleName[0] + '.';
+      console.log(strName);
+      alert(strName);
       /*method 2*/
-      //let person = prompt('Please enter your last name, name and middle name. Example: Pupkin Vacya Vasilevich.  ', 'Bortsov Alexander Mekhailovish');
-      //let personMiddle = person.split(' ').slice(1, 2).shift();
-      //let personFirst = person.split(' ').shift();
-      //let personLast = person.split(' ').pop();
-      //console.log(`${personFirst} ${personMiddle[0]}.${personLast[0]}.`)  
-      //console.log(personMiddle);
-      //console.log(personFirst);
-      //console.log(personLast);
-      //alert(`${personFirst} ${personMiddle[0]}.${personLast[0]}.`);
+      let person = prompt('Please enter your last name, name and middle name. Example: Pupkin Vacya Vasilevich.  ', 'Bortsov Alexander Mekhailovish');
+      let personMiddle = person.split(' ').slice(1, 2).shift();
+      let personFirst = person.split(' ').shift();
+      let personLast = person.split(' ').pop();
+      console.log(`${personFirst} ${personMiddle[0]}.${personLast[0]}.`)
+      console.log(personMiddle);
+      console.log(personFirst);
+      console.log(personLast);
+      alert(`${personFirst} ${personMiddle[0]}.${personLast[0]}.`);
       /*method 3*/
-      //let person = prompt('Please enter your last name, name and middle name. Example: Pupkin Vacya Vasilevich.  ', 'Bortsov Alexander Mekhailovish');
-      //let newPerson = '';
-      //for (let k = 0; k < person.length; k++) {
-      //   if (person[k] == person[k].toUpperCase()) {
-      //      newPerson += person[k];
-      //   }
-      //}
-      //let initials = newPerson.split(' ').join('.') + '.';
-      //newPerson = newPerson.split(' ').splice(1, 2).join('.') + '.';
-      //person = person.split(' ').splice(0, 1).join(' ') + ' ' + newPerson;
-      //console.log(person);
-      //alert(person);
-      //alert(initials);
+      let personNew = prompt('Please enter your last name, name and middle name. Example: Pupkin Vacya Vasilevich.  ', 'Bortsov Alexander Mekhailovish');
+      let newPerson = '';
+      for (let k = 0; k < personNew.length; k++) {
+         if (personNew[k] == personNew[k].toUpperCase()) {
+            newPerson += personNew[k];
+         }
+      }
+      let initials = newPerson.split(' ').join('.') + '.';
+      newPerson = newPerson.split(' ').splice(1, 2).join('.') + '.';
+      personNew = personNew.split(' ').splice(0, 1).join(' ') + ' ' + newPerson;
+      console.log(personNew);
+      alert(personNew);
+      alert(initials);
       /*task 4*/
       let number;
       let str = '';
