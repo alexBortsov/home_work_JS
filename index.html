@@ -25,16 +25,16 @@
       /* method 1*/
       let userFirst = prompt('Please enter any text with spaces', 'Please enter any text with spaces');
       let min = 0, max;
-      let strModif ='';
+      let strModif = '';
       for (let j = 0; j < userFirst.length; j++) {
-      let randNumber = Math.round(Math.random() * (max - min) + min);     
-      max = userFirst.length;
-      if (userFirst[j] === ' ') {
-         strModif += randNumber;
-        }else{ strModif += userFirst[j]} 
+         let randNumber = Math.round(Math.random() * (max - min) + min);
+         max = userFirst.length;
+         if (userFirst[j] === ' ') {
+            strModif += randNumber;
+         } else { strModif += userFirst[j] }
       }
-       console.log(max);   
-       alert(`Modified text: ${strModif}`);
+      console.log(max);
+      alert(`Modified text: ${strModif}`);
       /*method 2*/
       let userSecond = prompt('Please enter any text with spaces', 'Please enter any text with spaces');
       let minValue = 0, maxValue = userSecond.length;
@@ -45,8 +45,8 @@
             modifStr += userSecond[j].replace(' ', randNumber);
          } else { modifStr += userSecond[j] }
       }
-      
-      console.log(maxValue);  
+
+      console.log(maxValue);
       console.log(randNumber);
       alert(`Modified text: ${modifStr}`);
       /*task 3*/
@@ -93,12 +93,34 @@
             for (let i = 0; i < number; i++) {
                let sandomString = Math.round((10 + Math.random() * i));
                str += sandomString.toString(36);
+               console.log(sandomString);
             }
             break;
          }
       }
       console.log(str);
       alert(str);
+      let numberRand;
+      let strRand = '';
+      let arr_en = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '-', '+', '=', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+
+      while (true) {
+         numberRand = prompt('Please enter the number more 50');
+         if (!numberRand) {
+            break;
+         }
+         if (!isNaN(numberRand) && numberRand !== '') {
+            for (let i = 0; i < numberRand; i++) {
+               let sandomString = Math.round((10 + Math.random() * i));
+               strRand += arr_en[sandomString];
+               console.log(sandomString);
+
+            }
+            break;
+         }
+      }
+      console.log(strRand);
+      alert(strRand);
    </script>
 </body>
 
