@@ -121,6 +121,28 @@
       }
       console.log(strRand);
       alert(strRand);
+      /*metod 2*/
+      let numberRandom;
+      let strRandom = '';
+      let arr_eng = 'abcdefghijklmnopqrstuvwxyz!@#$%^&*()_-+=ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+      while (true) {
+         numberRandom = prompt('Please enter the number more 50');
+         if (!numberRandom) {
+            break;
+         }
+         if (!isNaN(numberRandom) && numberRandom !== '') {
+            let arrStr = arr_eng.split("");
+            console.log(arrStr);
+            for (let i = 0; i < numberRandom; i++) {
+               let sandomString = Math.round((10 + Math.random() * i));
+               strRandom += arrStr[sandomString];
+               console.log(sandomString);
+            }
+            break;
+         }
+      }
+      console.log(strRandom);
+      alert(strRandom);
    </script>
 </body>
 
