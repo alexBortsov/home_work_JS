@@ -1,0 +1,13 @@
+{
+   "folders": [
+	{
+		"path": "."
+	},
+	{
+		"path": "..\\..\\Html\\lessons\\two-js"
+	}
+],
+   "settings": {
+      "liveServer.settings.multiRootWorkspaceName": "home_work_js"
+   }
+}
