@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Task three</title>
+</head>
+
+<body>
+   <script>
+      /*Создать опросник. Найти любые 10 вопросов и написать приложение которой их задает
+   В конце работы вывести результат через команду document.write в виде списка*/
+      let question = '';
+      let arrQuestion = [
+         '1. What is your name?',
+         '2. What is your surname?',
+         '3. Where are you from?',
+         '4. What city were you born in?',
+         '5. What is your favourite dish?',
+         '6. What was the name of your first pet?',
+         '7. What city did your parents acquaint in?',
+         '8. How old are you?',
+         '9. What education do you have?',
+         '10. What is your favourite colour?'
+      ];
+      let arrTheAnswers = [];
+      for (let i = 0; i < arrQuestion.length; i++) {
+         let question = prompt('' + `Question : ${arrQuestion[i]}` + '');
+         arrTheAnswers.push(arrQuestion[i] + '<br><span class="answer__span">Your answer :' + question + '</span>');
+      }
+      console.log(arrTheAnswers);
+      document.write('<style>.container { width: 25%; margin: 0 auto; border: 5px solid rgb(206, 226, 25); text-align: center; border-radius: 15px; display: flex; align-items: center; justify-content: center; flex-direction: column; font-size: 40px; padding: 10px; color: #0000ff;}.answer__list{display:flex;align-items:center;justify-content:center;flex-direction:column;font-size:30px;padding:0}.answer__item{font-size:20px;list-style-type:none;color: grey;}.answer__item:not(:last-child){margin:0 0 10px 0}.answer__span{font-size:20px;color:red;}</style><div class=container><h2 class=question__title>Thank you for answering our questions.</h2><ul class=answer__list>Answer list:<li class=answer__item>' + `${arrTheAnswers[0]}` + '<li class=answer__item>' + `${arrTheAnswers[1]}` + '<li class=answer__item>' + `${arrTheAnswers[2]}` + '<li class=answer__item>' + `${arrTheAnswers[3]}` + '<li class=answer__item>' + `${arrTheAnswers[4]}` + '<li class=answer__item>' + `${arrTheAnswers[5]}` + '<li class=answer__item>' + `${arrTheAnswers[6]}` + '<li class=answer__item>' + `${arrTheAnswers[7]}` + '<li class=answer__item>' + `${arrTheAnswers[8]}` + '<li class=answer__item>' + `${arrTheAnswers[9]}` + '</ul></div>');
+
+
+
+
+   </script>
+</body>
+
+</html>

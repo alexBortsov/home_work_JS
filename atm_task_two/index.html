@@ -9,41 +9,44 @@
 </head>
 
 <body>
+   <button class=" btn" onclick="atm()">click</button>
    <script>
-      alert('You are welcomed by MY BANK, on your account 1001 UAH.')
-      const cardBalance = 1001;
-      while (true) {
-         const money = +prompt('Please enter the amount you want to withdraw (available banknotes in denominations: 5, 10, 20, 50, 100, 200)');
-         if (cardBalance > money && money !== 0 && money >= 5) {
-            const banknoteFive = 5;
-            const banknoteTen = 10;
-            const banknoteTwenty = 20;
-            const banknoteFifty = 50;
-            const banknoteHundred = 100;
-            const banknoteTwoHundred = 200;
-            let countTwoHundred = Math.floor(money / banknoteTwoHundred);
-            let countHundred = Math.floor((money - banknoteTwoHundred * countTwoHundred) / banknoteHundred);
-            let countFifty = Math.floor((money - (banknoteTwoHundred * countTwoHundred + banknoteHundred * countHundred)) / banknoteFifty);
-            let countTwenty = Math.floor((money - (banknoteTwoHundred * countTwoHundred + banknoteHundred * countHundred + banknoteFifty * countFifty)) / banknoteTwenty);
-            let countTen = Math.floor((money - (banknoteTwoHundred * countTwoHundred + banknoteHundred * countHundred + banknoteFifty * countFifty + banknoteTwenty * countTwenty)) / banknoteTen);
-            let countFive = Math.floor((money - (banknoteTwoHundred * countTwoHundred + banknoteHundred * countHundred + banknoteFifty * countFifty + banknoteTwenty * countTwenty + banknoteTen * countTen)) / banknoteFive);
-            let issued = banknoteTwoHundred * countTwoHundred + banknoteHundred * countHundred + banknoteFifty * countFifty + banknoteTwenty * countTwenty + banknoteTen * countTen + banknoteFive * countFive;
-            let residue = Math.floor(money - issued);
-            let balance = cardBalance - issued;
-            console.log('banknote 200: ' + countTwoHundred);
-            console.log('banknote 100: ' + countHundred);
-            console.log('banknote 50: ' + countFifty);
-            console.log('banknote 20: ' + countTwenty);
-            console.log('banknote 10: ' + countTen);
-            console.log('banknote 5: ' + countFive);
-            console.log('sumQuery: ' + issued);
-            console.log('cardBalance: ' + balance);
-            document.write('<style>.container{width:25%;margin:0 auto;border:1px solid #000;text-align:center;border-radius:15px;display:flex;align-items:center;justify-content:center;flex-direction:column}.check__menu-list{width:100%;display:flex;align-items:flex-start;justify-content:center;flex-direction:column;list-style-type:none}.check__hr{border:2px dotted #000;width:98%}</style><div class=container><h4>Thank you!</h4><hr class=check__hr><h1 class=check__title>MY BANK</h1><hr class=check__hr><h3 class=check__balance>Card balance: ' + `${balance} UAH.` + '<span class=check__balance_hr></span></h3><hr class=check__hr><ul class=check__menu-list><li class=check__menu-item>5 UAH. : ' + `${countFive} bills` + '<li class=check__menu-item>10 UAH. : ' + `${countTen} bills` + '<li class=check__menu-item>20 UAH. : ' + `${countTwenty} bills` + '<li class=check__menu-item>50 UAH. : ' + `${countFifty} bills` + '<li class=check__menu-item>100 UAH. : ' + `${countHundred} bills` + '<li class=check__menu-item>200 UAH. : ' + `${countTwoHundred} bills` + '</ul><hr class=check__hr><h3 class=check__amount>AMOUNT ISSUED: ' + `${issued} UAH.` + '</h3><h3 class=check__amount>ATM could not issue: ' + `${residue} UAH.` + '</h3></div>')
-            break;
+      function atm() {
+         alert('You are welcomed by MY BANK, on your account 1001 UAH.')
+         const cardBalance = 1001;
+         while (true) {
+            const money = +prompt('Please enter the amount you want to withdraw (available banknotes in denominations: 5, 10, 20, 50, 100, 200)');
+            if (cardBalance > money && money !== 0 && money >= 5) {
+               const banknoteFive = 5;
+               const banknoteTen = 10;
+               const banknoteTwenty = 20;
+               const banknoteFifty = 50;
+               const banknoteHundred = 100;
+               const banknoteTwoHundred = 200;
+               let countTwoHundred = Math.floor(money / banknoteTwoHundred);
+               let countHundred = Math.floor((money - banknoteTwoHundred * countTwoHundred) / banknoteHundred);
+               let countFifty = Math.floor((money - (banknoteTwoHundred * countTwoHundred + banknoteHundred * countHundred)) / banknoteFifty);
+               let countTwenty = Math.floor((money - (banknoteTwoHundred * countTwoHundred + banknoteHundred * countHundred + banknoteFifty * countFifty)) / banknoteTwenty);
+               let countTen = Math.floor((money - (banknoteTwoHundred * countTwoHundred + banknoteHundred * countHundred + banknoteFifty * countFifty + banknoteTwenty * countTwenty)) / banknoteTen);
+               let countFive = Math.floor((money - (banknoteTwoHundred * countTwoHundred + banknoteHundred * countHundred + banknoteFifty * countFifty + banknoteTwenty * countTwenty + banknoteTen * countTen)) / banknoteFive);
+               let issued = banknoteTwoHundred * countTwoHundred + banknoteHundred * countHundred + banknoteFifty * countFifty + banknoteTwenty * countTwenty + banknoteTen * countTen + banknoteFive * countFive;
+               let residue = Math.floor(money - issued);
+               let balance = cardBalance - issued;
+               console.log('banknote 200: ' + countTwoHundred);
+               console.log('banknote 100: ' + countHundred);
+               console.log('banknote 50: ' + countFifty);
+               console.log('banknote 20: ' + countTwenty);
+               console.log('banknote 10: ' + countTen);
+               console.log('banknote 5: ' + countFive);
+               console.log('sumQuery: ' + issued);
+               console.log('cardBalance: ' + balance);
+               document.write('<style>.container{width:25%;margin:0 auto;border:1px solid #000;text-align:center;border-radius:15px;display:flex;align-items:center;justify-content:center;flex-direction:column}.check__menu-list{width:100%;display:flex;align-items:flex-start;justify-content:center;flex-direction:column;list-style-type:none}.check__hr{border:2px dotted #000;width:98%}</style><div class=container><h4>Thank you!</h4><hr class=check__hr><h1 class=check__title>MY BANK</h1><hr class=check__hr><h3 class=check__balance>Card balance: ' + `${balance} UAH.` + '<span class=check__balance_hr></span></h3><hr class=check__hr><ul class=check__menu-list><li class=check__menu-item>5 UAH. : ' + `${countFive} bills` + '<li class=check__menu-item>10 UAH. : ' + `${countTen} bills` + '<li class=check__menu-item>20 UAH. : ' + `${countTwenty} bills` + '<li class=check__menu-item>50 UAH. : ' + `${countFifty} bills` + '<li class=check__menu-item>100 UAH. : ' + `${countHundred} bills` + '<li class=check__menu-item>200 UAH. : ' + `${countTwoHundred} bills` + '</ul><hr class=check__hr><h3 class=check__amount>AMOUNT ISSUED: ' + `${issued} UAH.` + '</h3><h3 class=check__amount>ATM could not issue: ' + `${residue} UAH.` + '</h3></div>')
+               break;
+            }
+            if (money > cardBalance) { alert('You have entered an amount greater than your account!'); }
+            if (money < 5 && money !== 0) { alert('You have entered an amount less than the face value of the banknotes in the ATM!'); }
+            if (money === 0) { alert('You have not entered the amount, goodbye!'); break; }
          }
-         if (money > cardBalance) { alert('You have entered an amount greater than your account!'); }
-         if (money < 5 && money !== 0) { alert('You have entered an amount less than the face value of the banknotes in the ATM!'); }
-         if (money === 0) { alert('You have not entered the amount, goodbye!'); break; }
       }
    </script>
 </body>
