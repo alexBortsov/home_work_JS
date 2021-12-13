@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <script>
+      const data = new Date();
+      const week = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+      let monthDays = [];
+      const monthNames = ["January", "February", "March", "April", "May", "June",
+         "July", "August", "September", "October", "November", "December"
+      ];
+      for (let i = 1; i <= 31; i++) {
+         monthDays.push(i);
+      }
+      if (monthDays) {
+         monthDays.unshift(' ', ' ', ' ');
+         monthDays.push(' ');
+      }
+      let month = monthNames[data.getMonth()];
+      let day = data.getDate();
+      let weekDay = data.getDay();
+      let year = data.getFullYear();
+      console.log(month);
+      console.log(day);
+      console.log(weekDay);
+      console.log(year);
+      document.write('<style>.container{width: 320px; height: 320px; display: flex; flex-wrap: wrap;justify-content: space-evenly;margin: 30px auto;}.months{height: 40px;width: 320px;border: 1px solid; display: flex; align-items: center;justify-content: center;}.box, .week{ height: 40px;width:  40px;border: 1px solid; display: flex; align-items: center;justify-content: center; background: rgb(224, 239, 224);}</style>')
+      document.write(`<div class="container">`)
+      document.write('<div class="months">' + monthNames[data.getMonth()] + ' ' + year + '</div>')
+      for (let k = 0; k < week.length; k++) {
+         document.write(`<div class="week">${week[k]}</div>`);
+         let weekbox = document.querySelectorAll('.week')[k];
+         console.log(weekbox);
+         if (k == weekDay) {
+
+            document.querySelectorAll('.week')[k].innerHTML = '<div style="color: red; width: 100%; height: 100%;display: flex;align-items: center;justify-content: center;">' + week[k] + '</div>';
+         }
+      }
+      let box = [];
+      for (let j = 0; j < monthDays.length; j++) {
+         document.write(`<div id=""  class="box">${monthDays[j]}</div>`)
+         if (document.querySelectorAll('.box')[j].innerHTML == day) {
+            document.querySelectorAll('.box')[j].innerHTML = '<div style="color: red; background: green; width: 100%; height: 100%;display: flex;align-items: center;justify-content: center;">' + day + '</div>';
+         }
+      }
+      document.write(`</div>`)
+   </script>
+</body>
+
+</html>
