@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <script>
+      alert('You are welcomed by MY BANK, on your account 1000 UAH.')
+      const cardBalance = 1000;
+
+      while (true) {
+         const money = +prompt('Please enter the amount you want to withdraw (available banknotes in denominations: 10, 20, 50)');
+         console.log(cardBalance > money);
+         console.log(money !== 0);
+         console.log(money);
+         if (cardBalance > money && money !== 0 && money >= 10) {
+            const banknoteTen = 10;
+            const banknoteTwenty = 20;
+            const banknoteFifty = 50;
+            let countFifty = Math.floor(money / banknoteFifty);
+            console.log(countFifty);
+            let countTwenty = Math.floor((money - countFifty * banknoteFifty) / banknoteTwenty);
+            console.log(countTwenty);
+            let countTen = Math.floor((money - ((countFifty * banknoteFifty) + (countTwenty * banknoteTwenty))) / banknoteTen);
+            console.log(countTen);
+            let issued = countFifty * banknoteFifty + countTwenty * banknoteTwenty + countTen * banknoteTen;
+            let residue = Math.floor(money - issued);
+            let balance = cardBalance - issued;
+            document.write('<style>.container{width:25%;margin:0 auto;border:1px solid #000;text-align:center;border-radius:15px;display:flex;align-items:center;justify-content:center;flex-direction:column}.check__menu-list{width:100%;display:flex;align-items:flex-start;justify-content:center;flex-direction:column;list-style-type:none}.check__hr{border:2px dotted #000;width:98%}</style><div class=container><h4>Thank you!</h4><hr class=check__hr><h1 class=check__title>MY BANK</h1><hr class=check__hr><h3 class=check__balance>Card balance: ' + `${balance} UAH.` + '<span class=check__balance_hr></span></h3><hr class=check__hr><ul class=check__menu-list><li class=check__menu-item>10 UAH. : ' + `${countTen} bills` + '<li class=check__menu-item>20 UAH. : ' + `${countTwenty} bills` + '<li class=check__menu-item>50 UAH. : ' + `${countFifty} bills` + '</ul><hr class=check__hr><h3 class=check__amount>AMOUNT ISSUED: ' + `${issued} UAH.` + '</h3><h3 class=check__amount>ATM could not issue: ' + `${residue} UAH.` + '</h3></div>')
+            break;
+         }
+         if (money > cardBalance) { alert('You have entered an amount greater than your account!'); }
+         if (money < 10 && money !== 0) { alert('You have entered an amount less than the face value of the banknotes in the ATM!'); }
+         if (money === 0) { alert('You have not entered the amount, goodbye!'); break; }
+      }
+   </script>
+</body>
+
+</html>
