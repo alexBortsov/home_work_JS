@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Площадь прямоугольника</title>
+   <style>
+      .container {
+         width: 400px;
+         margin: 200px auto;
+         text-align: center;
+      }
+
+      .container p {
+         color: red;
+      }
+   </style>
+</head>
+
+<body>
+   <div class="container">
+      <h2>Площадь прямоугольника</h2>
+      <p>В всплывающем окне введите размеры катетов a и b.</p>
+      <img src="прямоугольный треугольник.png" alt="прямоугольный треугольник">
+   </div>
+   <script>
+      function areaTriangle() {
+         //площадь прямоугольного треугольника
+         let a = +prompt('Введите размер катета \"a\"', '5');
+         let h = +prompt('Введите размер катета \"b\"', '7');
+         let s = 1 / 2 * a * h;//где a и b — катеты
+         //проверка
+         console.log(`Проверка результата с цифрами по умольчанию: ${1 / 2 * 5 * 7}`);
+         console.log(s);
+         document.write(`<h1>Площадь вашего треугольника: ${s};</h1>`);
+      }
+      setTimeout(areaTriangle, 5000);
+   </script>
+</body>
+
+</html>
