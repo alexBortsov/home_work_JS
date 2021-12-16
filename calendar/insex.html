@@ -42,7 +42,7 @@
             document.querySelectorAll('.week')[k].innerHTML = '<div style="color: red; width: 100%; height: 100%;display: flex;align-items: center;justify-content: center;">' + week[k] + '</div>';
          }
       }
-      let box = [];
+      
       for (let j = 0; j < monthDays.length; j++) {
          document.write(`<div id=""  class="box">${monthDays[j]}</div>`)
          if (document.querySelectorAll('.box')[j].innerHTML == day) {
