@@ -1,0 +1,48 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+:root{
+  --color-text: chartreuse;
+  --color-title: rgb(44, 131, 56);
+}
+
+.container{
+   width: 500px;
+   height: auto;
+   margin: 30px auto;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   flex-wrap: wrap;
+   background-color: cadetblue;
+   padding: 10px;
+   border-radius: 15px;
+
+}
+
+.btn{
+   width: 100px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 10px 50px;
+   order: 1;
+   margin: 10px 0px 0px 0px;
+   font-size: 20px;
+   align-self: center;
+   border-radius: 10px;
+   
+  }
+  table{
+     margin: 0px 0px 20px 0px;
+  }
+  table caption{
+     color: var(--color-text);
+     padding: 0px 0px 10px 0px;
+  }
+  table tr th{
+     color: var(--color-title);
+  }
