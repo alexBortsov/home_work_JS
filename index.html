@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- <link rel="stylesheet" href="style.css"> -->
+   <!-- <link rel="stylesheet" href="animation.css"> -->
+   
+   <title>Document</title>
+</head>
+
+<body>
+
+   <div class="container">
+      <div class="control__select-checkbox-group">
+         <h3 class="title_select-checkbox">Control Traffic Light</h3>
+         <div class="button__group">
+            <button class="btn__standby-mode">Standby mode</button>
+            <button class="btn__paused">Pause</button>
+         </div>
+         <div class="block_select">
+            <select name="" id="" class="onOff_traffic-light">
+               <option value="on">on</option>
+               <option value="off">off</option>
+            </select>
+         </div>
+         <div class="block_checkbox">
+            <label for="hidden_traffic-light">Hidden control</label>
+            <input type="checkbox" class="hidden_traffic-light">
+         </div>
+      </div>
+      <div class="traffic_light">
+         <div class="light_red lightColor" data-red></div>
+         <div class="light_yellow lightColor" data-yellow></div>
+         <div class="light_green lightColor" data-green></div>
+      </div>
+      <div class="control-lifht__input-button-group">
+         <input type="number" name="red" class="red-time" data-time-red>
+         <button class="btn__onOff-red">Power <span>RED</span></button>
+         <input type="number" name="yellow" class="yellow-time" data-time-yellow>
+         <button class="btn__onOff-yellow">Power<span>YELLOW</span></button>
+         <input type="number" name="green" class="green-time" data-time-green>
+         <button class="btn__onOff-green">Power<span>GREEN</span></button>
+      </div>
+   </div>
+   <script src="trafficLight.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,206 @@
+.container {
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.control__select-checkbox-group {
+    width: 100%;
+    flex: 0 1 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0px 0px 20px 0px;
+
+}
+.title_select-checkbox {
+    width: 100%;
+    display: block;
+    flex: 0 1 100%;
+    text-align: center;
+    font-size: 45px;
+}
+.button__group {
+    flex: 0 1 30%;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+.btn__standby-mode {
+   width: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 55px;
+    border: 2px solid darkgrey;
+    background-color: darkslategray;
+    color: floralwhite;
+    border-radius: 5px;
+    margin: 0px 5px 0px 0px;
+
+}
+.btn__paused{
+   width: 90px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 17px 55px;
+   border: 2px solid darkgrey;
+   background-color: darkslategray;
+   color: floralwhite;
+   border-radius: 5px;
+}
+.block_select {
+    flex: 0 1 30%;
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+}
+.onOff_traffic-light {
+   width: 90px;
+   height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    border: 2px solid darkgrey;
+    
+    color: darkslategray;
+    border-radius: 5px;
+   
+}
+.block_checkbox {
+    flex: 0 1 30%;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;  
+}
+
+.traffic_light {
+    width: 100px;
+    height: 270px;
+    background-color: black;
+    border: 2px solid grey;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px 2px rgb(8, 8, 24);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0px 74px 0px 0px;
+    
+}
+.light_red {
+    width: 80px;
+    height: 80px;
+    border: 1px solid grey;
+    border-radius: 50%;
+}
+.light_yellow {
+    width: 80px;
+    height: 80px;
+    border: 1px solid grey;
+    border-radius: 50%;
+}
+.light_green {
+    width: 80px;
+    height: 80px;
+    border: 1px solid grey;
+    border-radius: 50%;
+}
+
+.control-lifht__input-button-group {
+    width: 100%;
+    flex: 0 1 50%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4%;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid teal;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: rgb(245, 228, 245);
+
+}
+.red-time {
+    width: 40px;
+    border: 2px solid grey;
+    color: red;
+    border-radius: 5px;
+}
+.btn__onOff-red {
+    width: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 55px;
+    border: 2px solid darkgrey;
+    background-color: darkslategray;
+    color: floralwhite;
+    border-radius: 5px;
+}
+.btn__onOff-red span{
+    color: red;
+    padding: 0px 0px 0px 10px;
+}
+.yellow-time {
+    width: 40px;
+    border: 2px solid grey;
+    color: red;
+    border-radius: 5px;
+}
+.btn__onOff-yellow {
+    width: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 55px;
+    border: 2px solid darkgrey;
+    background-color: darkslategray;
+    color: floralwhite;
+    border-radius: 5px;
+}
+.btn__onOff-yellow span{
+    color: yellow;
+    padding: 0px 0px 0px 10px;
+}
+.green-time {
+    width: 40px;
+    border: 2px solid grey;
+    color: red;
+    border-radius: 5px;
+}
+.btn__onOff-green {
+    width: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 55px;
+    border: 2px solid darkgrey;
+    background-color: darkslategray;
+    color: floralwhite;
+    border-radius: 5px;
+}
+.btn__onOff-green span{
+    color: green;
+    padding: 0px 0px 0px 10px;
+}
+.grey{
+    background-color: grey;
+    color: rgb(49, 48, 48);
+}
+ /* [data-red]{
+    animation: _red  10s step-end infinite;
+} */
+/*[data-yellow]{
+    animation: _yellow  10s step-end infinite;
+}
+[data-green]{
+    animation: _green  10s step-end infinite;
+} */
