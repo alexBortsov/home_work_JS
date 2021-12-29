@@ -113,20 +113,33 @@
     border: 1px solid grey;
     border-radius: 50%;
 }
-
+.traffic-light__control{
+   flex: 0 1 70%;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   border: 2px solid teal;
+   border-radius: 15px;
+    background-color: rgb(245, 228, 245);
+    padding: 10px;
+    margin: 20px;
+}
+.controle__title{
+   text-align: center;
+}
+.control__input-time{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
 .control-lifht__input-button-group {
     width: 100%;
-    flex: 0 1 50%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 4%;
     align-items: center;
     justify-content: center;
-    border: 2px solid teal;
     padding: 10px;
-    border-radius: 15px;
-    background-color: rgb(245, 228, 245);
-
 }
 .red-time {
     width: 40px;
@@ -195,6 +208,22 @@
     background-color: grey;
     color: rgb(49, 48, 48);
 }
+.input-time, .red-time, .yellow-time, .green-time{
+   width: 50px;
+   border: 3px solid greenyellow;
+   border-radius: 5px;
+   margin: 0px 5px 0px 5px;
+   text-align: center;
+   font-weight: 900;
+}
+.blockRedNumber, .blockYellowNumber, .blockGreenNumber{
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   
+}
+
  /* [data-red]{
     animation: _red  10s step-end infinite;
 } */

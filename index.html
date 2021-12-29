@@ -5,9 +5,9 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <!-- <link rel="stylesheet" href="style.css"> -->
+   <link rel="stylesheet" href="style.css">
    <!-- <link rel="stylesheet" href="animation.css"> -->
-   
+
    <title>Document</title>
 </head>
 
@@ -36,14 +36,27 @@
          <div class="light_yellow lightColor" data-yellow></div>
          <div class="light_green lightColor" data-green></div>
       </div>
-      <div class="control-lifht__input-button-group">
-         <input type="number" name="red" class="red-time" data-time-red>
-         <button class="btn__onOff-red">Power <span>RED</span></button>
-         <input type="number" name="yellow" class="yellow-time" data-time-yellow>
-         <button class="btn__onOff-yellow">Power<span>YELLOW</span></button>
-         <input type="number" name="green" class="green-time" data-time-green>
-         <button class="btn__onOff-green">Power<span>GREEN</span></button>
+      <div class="traffic-light__control">
+         <h3 class="controle__title">Control</h3>
+         <div class="control__input-time">
+            <input type="number" class="input-time">
+         </div>
+         <div class="control-lifht__input-button-group">
+            <div class="blockRedNumber">
+               <input type="number" name="red" class="red-time" data-time-red>
+            </div>
+            <button class="btn__onOff-red">Power<span>RED</span></button>
+            <div class="blockYellowNumber">
+               <input type="number" name="yellow" class="yellow-time" data-time-yellow>
+            </div>
+            <button class="btn__onOff-yellow">Power<span>YELLOW</span></button>
+            <div class="blockGreenNumber">
+               <input type="number" name="green" class="green-time" data-time-green>
+            </div>
+            <button class="btn__onOff-green">Power<span>GREEN</span></button>
+         </div>
       </div>
+
    </div>
    <script src="trafficLight.js"></script>
 </body>
