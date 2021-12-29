@@ -79,13 +79,21 @@ function redValue() {
    return val;
 }
 inputTime.addEventListener('input', (event) => {
+
    lengthWork = +(event.target.value.replace(/[^\d]/g, ''));
-   lengthWorkRed = lengthWork / 3,
-      lengthWorkYellow = lengthWork / 3,
-      lengthWorkGreen = lengthWork / 3;
+   if (oldValue < lengthWork) {
+      lengthWorkRed++,
+         lengthWorkYellow++,
+         lengthWorkGreen++;
+   } else {
+      lengthWorkRed--,
+         lengthWorkYellow--,
+         lengthWorkGreen--;
+   }
    redTime.setAttribute('max', `${lengthWork - 2}`);
    yellowTime.setAttribute('max', `${lengthWork - 2}`);
    greenTime.setAttribute('max', `${lengthWork - 2}`);
+   oldValue = event.target.value;
    animationAddTrafficLight();
 
 });
