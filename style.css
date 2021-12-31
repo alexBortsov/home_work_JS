@@ -115,6 +115,7 @@
 }
 .traffic-light__control{
    flex: 0 1 70%;
+   display: flex;
    flex-direction: column;
    align-items: center;
    justify-content: center;
