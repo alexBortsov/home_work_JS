@@ -39,19 +39,27 @@
       <div class="traffic-light__control">
          <h3 class="controle__title">Control</h3>
          <div class="control__input-time">
-            <input type="number" class="input-time" step="6">
+            <button class="buttonLeng_max">+</button>
+            <input type="number" class="input-time" min="12" max="36" step="6">
+            <button class="buttonLeng_min">-</button>
          </div>
          <div class="control-lifht__input-button-group">
             <div class="blockRedNumber">
+               <button class="buttonRed_max">+</button>
                <input type="number" name="red" step="2" class="red-time" min="2" data-time-red>
+               <button class="buttonRed_min">-</button>
             </div>
             <button class="btn__onOff-red">Power<span>RED</span></button>
             <div class="blockYellowNumber">
+               <button class="buttonYellow_max">+</button>
                <input type="number" name="yellow" step="2" class="yellow-time" min="2" data-time-yellow>
+               <button class="buttonYellow_min">-</button>
             </div>
             <button class="btn__onOff-yellow">Power<span>YELLOW</span></button>
             <div class="blockGreenNumber">
+               <button class="buttonGreen_max">+</button>
                <input type="number" name="green" step="2" class="green-time" min="2" data-time-green>
+               <button class="buttonGreen_min">-</button>
             </div>
             <button class="btn__onOff-green">Power<span>GREEN</span></button>
          </div>
