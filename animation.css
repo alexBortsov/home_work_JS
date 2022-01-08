@@ -1,4 +1,4 @@
-@keyframes _red{
+/*@keyframes _red{
 0%{
     background-color: red;
 }
@@ -12,6 +12,7 @@
 100%{
     background-color: grey;
 }
+
 }
 
 @keyframes _yellow{
@@ -75,8 +76,8 @@
 100%{
     background-color: grey;
 }
-}
-@keyframes _redStandby{
+}*/
+/*@keyframes _redStandby{
 0%{
     background-color: grey;    
 }
@@ -156,4 +157,4 @@
     100%{
         background-color: grey;
     }
-}
+}*/
